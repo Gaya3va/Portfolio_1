@@ -1,212 +1,350 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gayatri Akalwadi | Full Stack Developer</title>
+<!DOCTYPE html><html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Gayatri Akalwadi | Portfolio</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.14.0/devicon.min.css"><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"><style>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-:root {
-  --primary: #2563eb;
-  --dark: #0f172a;
-  --gray: #64748b;
-  --light: #f8fafc;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+html{
+scroll-behavior:smooth;
 }
 
-body {
-  background: var(--light);
-  color: var(--dark);
-  line-height: 1.6;
+body{
+background:#f8fafc;
+color:#0f172a;
+line-height:1.6;
+transition:0.3s;
 }
 
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-  padding: 60px 0;
+.dark-mode{
+background:#020617;
+color:#e2e8f0;
 }
 
-h1, h2 {
-  margin-bottom: 20px;
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+padding:70px 0;
 }
 
-h1 {
-  font-size: 3rem;
-  font-weight: 700;
+h1{
+font-size:3rem;
+font-weight:700;
 }
 
-h2 {
-  font-size: 1.8rem;
-  color: var(--primary);
+h2{
+font-size:2rem;
+margin-bottom:25px;
+color:#2563eb;
 }
 
-p {
-  color: var(--gray);
+p{
+color:#475569;
 }
 
-.btn {
-  display: inline-block;
-  padding: 12px 25px;
-  margin-right: 10px;
-  background: var(--primary);
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: 0.3s;
+/* NAVBAR */
+
+nav{
+position:sticky;
+top:0;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+z-index:100;
 }
 
-.btn:hover {
-  background: #1e40af;
+.dark-mode nav{
+background:#1e293b;
 }
 
-.section {
-  margin-bottom: 80px;
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 0;
+}
+
+.nav-links a{
+margin-left:25px;
+text-decoration:none;
+color:inherit;
+font-weight:500;
+}
+
+.nav-links a:hover{
+color:#2563eb;
+}
+
+.toggle{
+cursor:pointer;
+padding:8px 15px;
+border:none;
+border-radius:6px;
+background:#2563eb;
+color:white;
 }
 
 /* HERO */
-.hero {
-  text-align: center;
-  padding-top: 100px;
+
+.hero{
+text-align:center;
+padding:160px 20px;
+background:linear-gradient(135deg,#eef2ff,#f8fafc);
 }
 
-.hero span {
-  color: var(--primary);
+.dark-mode .hero{
+background:#020617;
 }
 
-/* SKILLS GRID */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+.hero span{
+color:#2563eb;
 }
 
-.skill-card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-  transition: 0.3s;
+/* BUTTON */
+
+.btn{
+display:inline-block;
+margin-top:20px;
+margin-right:10px;
+padding:12px 24px;
+background:#2563eb;
+color:white;
+border-radius:6px;
+text-decoration:none;
+transition:0.3s;
 }
 
-.skill-card:hover {
-  transform: translateY(-5px);
+.btn:hover{
+background:#1e40af;
 }
 
-/* PROJECT CARDS */
-.project-card {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.07);
-  margin-bottom: 30px;
-  transition: 0.3s;
+/* SKILLS */
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
+.skill-card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 8px 25px rgba(0,0,0,0.05);
+transition:0.3s;
 }
 
-.project-card h3 {
-  margin-bottom: 10px;
+.dark-mode .skill-card{
+background:#1e293b;
+}
+
+.skill-card:hover{
+transform:translateY(-5px);
+}
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.project-card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.07);
+transition:0.3s;
+}
+
+.dark-mode .project-card{
+background:#1e293b;
+}
+
+.project-card:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 50px rgba(0,0,0,0.12);
+}
+
+.project-card img{
+width:100%;
+border-radius:10px;
+margin-bottom:15px;
 }
 
 /* CONTACT */
-.contact a {
-  color: var(--primary);
-  text-decoration: none;
+
+.contact a{
+color:#2563eb;
+text-decoration:none;
 }
 
-footer {
-  text-align: center;
-  padding: 30px 0;
-  color: var(--gray);
-  font-size: 0.9rem;
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+color:#64748b;
 }
-</style>
-</head>
 
-<body>
+</style></head><body><nav><div class="container nav-container"><h3>Gayatri</h3><div class="nav-links">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div><button class="toggle" onclick="toggleMode()">🌙</button>
 
-<!-- HERO -->
-<section class="hero container section">
-  <h1>Gayatri <span>Akalwadi</span></h1>
-  <p>Full Stack Web Developer building scalable and responsive web applications.</p>
-  <br>
-  <a href="#" class="btn">Download Resume</a>
-  <a href="https://github.com/Gaya3va" class="btn">GitHub</a>
-  <a href="https://linkedin.com/in/gayatri-akalwadi-44a5a0330" class="btn">LinkedIn</a>
+<div class="hero-container">
+</div></nav><section class="hero"><h1>Hi, I'm <span>Gayatri Akalwadi</span></h1><p id="typing"></p>
+<script>
+
+var typed = new Typed("#typing", {
+strings: [
+"Information Science Engineering Student",
+"Aspiring Full Stack Developer",
+"Building Scalable Web Applications",
+"Passionate About Problem Solving"
+],
+typeSpeed: 50,
+backSpeed: 30,
+loop: true
+});
+
+</script>
+
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+let current = "";
+
+sections.forEach(section => {
+const sectionTop = section.offsetTop;
+if(pageYOffset >= sectionTop - 60){
+current = section.getAttribute("id");
+}
+});
+
+navLinks.forEach(link => {
+link.classList.remove("active");
+if(link.getAttribute("href").includes(current)){
+link.classList.add("active");
+}
+});
+});
+</script>
+
+<div class="hero-buttons">
+<a href="GayatriAkalwadi_Resume.pdf" class="btn" download>Download Resume</a>
+<a href="https://github.com/Gaya3va" class="btn">GitHub</a>
+<a href="https://linkedin.com/in/gayatri-akalwadi-44a5a0330" class="btn">LinkedIn</a>
+</div>
 </section>
 
-<!-- ABOUT -->
-<section class="container section">
-  <h2>About Me</h2>
-  <p>
-    Detail-oriented Full Stack Developer with hands-on experience building applications using React, Node.js, and MongoDB. Strong in REST APIs, authentication systems, and responsive UI design. Passionate about clean architecture and problem-solving.
-  </p>
+</div>
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script>
+ScrollReveal().reveal('.project-card', {
+delay:200,
+distance:'50px',
+origin:'bottom'
+});
+</script>
+
+
+<section id="about" class="container"><h2>About Me</h2><p>
+I am a passionate developer currently studying Information Science Engineering.
+I enjoy building modern web applications using technologies like React,
+Node.js and MongoDB. I love solving real-world problems and continuously
+improving my development skills.
+</p></section>
+
+<section id="skills" class="container"><h2>Technical Skills</h2>
+<div class="skills-grid">
+<div class="skill-card">
+
+<h3>Languages</h3>
+
+<p>
+<i class="devicon-html5-plain colored"></i> HTML  
+<i class="devicon-css3-plain colored"></i> CSS  
+<i class="devicon-javascript-plain colored"></i> JavaScript  
+<i class="devicon-python-plain colored"></i> Python  
+<i class="devicon-c-plain colored"></i> C  
+<i class="devicon-java-plain colored"></i> Java
+</p>
+
+</div>
+</div><div class="skill-card">
+<h3>Frontend</h3>
+<p>
+<i class="devicon-react-original colored"></i> React
+<i class="devicon-redux-original colored"></i> Redux
+<i class="devicon-tailwindcss-original colored"></i> Tailwind CSS
+</p>
+
+</div><div class="skill-card">
+<h3>Backend</h3>
+<p>
+<i class="devicon-nodejs-plain colored"></i> Node.js
+<i class="devicon-express-original colored"></i> Express.js
+</p>
+</div><div class="skill-card">
+<h3>Database</h3>
+<p>
+<i class="devicon-mongodb-plain colored"></i> MongoDB
+<i class="devicon-mysql-plain colored"></i> MySQL
+</p>
+</div><div class="skill-card">
+<h3>Tools</h3>
+<p>
+<i class="devicon-git-plain colored"></i> Git
+<i class="devicon-github-original colored"></i> GitHub
+<i class="devicon-vscode-plain colored"></i> VS Code
+</p>
+</div></div></section>
+
+
+<section class="container">
+<h2>GitHub Activity</h2>
+
+<img src="https://github-readme-stats.vercel.app/api?username=Gaya3va&show_icons=true&theme=default">
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=Gaya3va">
+
 </section>
 
-<!-- SKILLS -->
-<section class="container section">
-  <h2>Technical Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-card">
-      <h3>Languages</h3>
-      <p>HTML, CSS, JavaScript, Python, C</p>
-    </div>
-    <div class="skill-card">
-      <h3>Frontend</h3>
-      <p>React, Redux, Tailwind CSS</p>
-    </div>
-    <div class="skill-card">
-      <h3>Backend</h3>
-      <p>Node.js, Express.js</p>
-    </div>
-    <div class="skill-card">
-      <h3>Database</h3>
-      <p>MongoDB, MySQL</p>
-    </div>
-  </div>
-</section>
+<section id="projects" class="container"><h2>Projects</h2>
+    <div class="projects">
+        <div class="project-card"><img src="pulsewire.jpeg"><h3>PulseWire</h3><p>Real-time news platform displaying categorized news using NewsAPI with search and dark mode.</p><p><b>Tech Stack:</b> HTML, CSS, JavaScript</p><a href="https://github.com/Gaya3va/PulseWire" class="btn">GitHub</a>
+<a href="https://gaya3va.github.io/PulseWire/" class="btn">Live Demo</a>
+</div>
 
-<!-- PROJECTS -->
-<section class="container section">
-  <h2>Projects</h2>
+<div class="project-card"><img src="SSM logo.jpeg"><h3>Skills-Sharing Marketplace</h3><p>
+A collaborative platform where users can share skills and learn from others through a peer-to-peer system.
+</p><p><b>Tech Stack:</b> React, Node.js, Express, MongoDB</p><p><b>Team Project</b></p><a href="https://github.com/gaganml13/skillshare" class="btn">GitHub</a>
+<a href="https://skillshare-rosy.vercel.app" class="btn">Live Demo</a>
 
-  <div class="project-card">
-    <h3>PulseWire</h3>
-    <p>Full-stack content sharing platform with JWT authentication and RESTful API architecture.</p>
-    <br>
-    <a href="https://github.com/Gaya3va/PulseWire" class="btn">GitHub</a>
-  </div>
+</div>
+<div class="project-card"><h3>TIME2HIRE 🚧</h3><p>Placement preparation tracker helping students monitor DSA progress and interview readiness.</p><p><b>Status:</b> In Development</p></div>
+<div class="project-card"><h3>Bucket List🚧</h3><p>Goal tracking web application where users can manage personal goals.</p><p><b>Status:</b> Upcoming</p></div></div></section>
 
-  <div class="project-card">
-    <h3>Skills Sharing Marketplace</h3>
-    <p>Collaborative platform enabling users to exchange skills with authentication and booking system.</p>
-    <br>
-    <a href="#" class="btn">GitHub</a>
-  </div>
+<section id="contact" class="container contact"><h2>Contact</h2><p>Email: <a href="mailto:gayatri.ise24@cmrit.ac.in">gayatri.ise24@cmrit.ac.in</a></p><p>Location: Bengaluru, Karnataka</p><p>GitHub: <a href="https://github.com/Gaya3va">github.com/Gaya3va</a></p><p>LinkedIn: <a href="https://linkedin.com/in/gayatri-akalwadi-44a5a0330">linkedin.com/in/gayatri-akalwadi</a></p></section><footer>© 2026 Gayatri Akalwadi | Built with HTML, CSS & JavaScript
 
-</section>
+</footer><script>
 
-<!-- CONTACT -->
-<section class="container section contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:gayatri.ise24@cmrit.ac.in">gayatri.ise24@cmrit.ac.in</a></p>
-  <p>Location: Bengaluru, Karnataka</p>
-</section>
+function toggleMode(){
+document.body.classList.toggle("dark-mode");
+}
 
-<footer>
-  © 2026 Gayatri Akalwadi | Built with HTML & CSS
-</footer>
-
-</body>
+</script></body>
 </html>
